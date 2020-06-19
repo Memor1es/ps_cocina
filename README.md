@@ -30,6 +30,7 @@ VIDEO
 https://streamable.com/dpzpg8
 
 [ENG]
+
 1.Change the job in cl_cooking.lua line 49 and line 73, the default is "unemployed", change it to whatever you want
 
 2.If you want to change the blip, there is a blip in cl_cooking.lua line 46 - line 60, there are instructions there.
