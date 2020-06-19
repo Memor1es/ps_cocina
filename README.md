@@ -24,3 +24,6 @@ Después de hacer el paso 5, debe agregar:
 6. Después de agregar la lista, debe agregar el servidor para que funcione, solo copie la combinación5, la combinación6 o ...
 
 7. Hay elemento1 y elemento2 en los archivos del servidor, más elementos que necesita, si necesita agregar 3 o 4 combinaciones de los elementos para hacer 1 elemento, solo contácteme, lo ayudaré
+
+VIDEO
+https://streamable.com/dpzpg8
