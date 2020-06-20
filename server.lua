@@ -8,15 +8,15 @@
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
  
-RegisterServerEvent('cooking:combination1') -- Artículo Combinación 1 
-AddEventHandler('cooking:combination1', function()
+RegisterServerEvent('ps_core:combination1') -- Artículo Combinación 1 
+AddEventHandler('ps_core:combination1', function()
     local xPlayer = ESX.GetPlayerFromId(source)
-	local xItem1 = xPlayer.getInventoryItem('bread') -- Item requerido para cocinar. Se puede cambiar a Aceite o etc -- Item required for cooking. Can be changed to Oil or etc
+	local xItem1 = xPlayer.getInventoryItem('bread') -- Item requerido para cocinar. Se puede cambiar a Aceite o etc -- Item required for ps_core. Can be changed to Oil or etc
 	local xItem2 = xPlayer.getInventoryItem('water')
 	
 	if xItem1.count > 0 then  -- Artículo 1 Count
 		if xItem2.count > 0 then -- Artículo 2 Count
-			TriggerClientEvent('cooking:animation' , source)
+			TriggerClientEvent('ps_core:animation' , source)
 			Citizen.Wait(10000)
 			xPlayer.addInventoryItem('pollo_asado', 1)
 			xPlayer.removeInventoryItem('pollo_vivo', 1)
@@ -30,15 +30,15 @@ AddEventHandler('cooking:combination1', function()
 end)
 
  
-RegisterServerEvent('cooking:combination2') 
-AddEventHandler('cooking:combination2', function()
+RegisterServerEvent('ps_core:combination2') 
+AddEventHandler('ps_core:combination2', function()
     local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem1 = xPlayer.getInventoryItem('bread') 
 	local xItem2 = xPlayer.getInventoryItem('water') 
 	
 	if xItem1.count > 0 then  
 		if xItem2.count > 0 then
-			TriggerClientEvent('cooking:animation' , source) 
+			TriggerClientEvent('ps_core:animation' , source) 
 			Citizen.Wait(10000)
 			xPlayer.addInventoryItem('sandwich_devian', 5)
 			xPlayer.removeInventoryItem('packaged_chicken', 2)
@@ -52,15 +52,15 @@ AddEventHandler('cooking:combination2', function()
 end)
 
  
-RegisterServerEvent('cooking:combination3')
-AddEventHandler('cooking:combination3', function()
+RegisterServerEvent('ps_core:combination3')
+AddEventHandler('ps_core:combination3', function()
     local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem1 = xPlayer.getInventoryItem('bread')
 	local xItem2 = xPlayer.getInventoryItem('water')
 	
 	if xItem1.count > 0 then 
 		if xItem2.count > 0 then 
-			TriggerClientEvent('cooking:animation' , source)
+			TriggerClientEvent('ps_core:animation' , source)
 			Citizen.Wait(10000)
 			xPlayer.addInventoryItem('lubina', 1)
 			xPlayer.removeInventoryItem('fish', 1) 
@@ -74,15 +74,15 @@ AddEventHandler('cooking:combination3', function()
 end)
  
  
-RegisterServerEvent('cooking:combination4')
-AddEventHandler('cooking:combination4', function()
+RegisterServerEvent('ps_core:combination4')
+AddEventHandler('ps_core:combination4', function()
     local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem1 = xPlayer.getInventoryItem('bread')
 	local xItem2 = xPlayer.getInventoryItem('water')
 	
 	if xItem1.count > 0 then
 		if xItem2.count > 0 then
-			TriggerClientEvent('cooking:animation' , source)
+			TriggerClientEvent('ps_core:animation' , source)
 			Citizen.Wait(10000)
 			xPlayer.addInventoryItem('sopa', 1)	
 			xPlayer.removeInventoryItem('meat', 1) 
@@ -97,15 +97,15 @@ AddEventHandler('cooking:combination4', function()
 end) 
 
 
-RegisterServerEvent('cooking:combination5') 
-AddEventHandler('cooking:combination5', function()
+RegisterServerEvent('ps_core:combination5') 
+AddEventHandler('ps_core:combination5', function()
     local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem1 = xPlayer.getInventoryItem('bread') 
 	local xItem2 = xPlayer.getInventoryItem('water')
 	
 	if xItem1.count > 0 then
 		if xItem2.count > 0 then
-			TriggerClientEvent('cooking:animation' , source) 
+			TriggerClientEvent('ps_core:animation' , source) 
 			Citizen.Wait(10000)
 			xPlayer.addInventoryItem('chocolate_cupcake', 1)
 			xPlayer.removeInventoryItem('chocolate', 1)

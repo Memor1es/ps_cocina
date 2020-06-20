@@ -99,8 +99,8 @@ Citizen.CreateThread(function()
 	end
 end)
 
-RegisterNetEvent('cooking:animation')
-AddEventHandler('cooking:animation', function()
+RegisterNetEvent('ps_core:animation')
+AddEventHandler('ps_core:animation', function()
 	TaskStartScenarioInPlace(PlayerPedId(), "PROP_HUMAN_BBQ", 0, true) -- animaton 
 	Citizen.Wait(10000) -- Progreso de tiempo, en ms, 1 segundo = 1000 ms, el valor es 10000, entonces, sus 10 segundos
 	ClearPedTasksImmediately(PlayerPedId()) -- Función para detener la animación.
@@ -109,7 +109,7 @@ end)
 
 function openMenu()
     ESX.UI.Menu.Open(
-        'default', GetCurrentResourceName(), 'cooking',
+        'default', GetCurrentResourceName(), 'ps_core',
         {
             title    = 'Parilla',
             align    = 'top-right',
@@ -127,19 +127,19 @@ function openMenu()
 
         if value == 'menu1' then
             menu.close()
-            TriggerServerEvent('cooking:combination1')
+            TriggerServerEvent('ps_core:combination1')
 		elseif value == 'menu2' then
             menu.close()
-            TriggerServerEvent('cooking:combination2')
+            TriggerServerEvent('ps_core:combination2')
 		elseif value == 'menu3' then
             menu.close()
-            TriggerServerEvent('cooking:combination3')
+            TriggerServerEvent('ps_core:combination3')
 		elseif value == 'menu4' then
             menu.close()
-            TriggerServerEvent('cooking:combination4')
+            TriggerServerEvent('ps_core:combination4')
 		elseif value == 'menu5' then
             menu.close()
-            TriggerServerEvent('cooking:combination5')
+            TriggerServerEvent('ps_core:combination5')
         end
     end,
     function(data, menu)
